@@ -80,9 +80,7 @@ func (b *Poloniex) GetOrderBook(market, cat string, depth int) (orderBook OrderB
 	if cat != "bid" && cat != "ask" && cat != "both" {
 		cat = "both"
 	}
-	if depth > 100 {
-		depth = 100
-	}
+
 	if depth < 1 {
 		depth = 1
 	}
